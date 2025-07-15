@@ -1,0 +1,15 @@
+# Ignore dataset files
+dataset/
+*.npy
+
+# Logs and outputs
+logs/
+results/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Virtual environments
+venv/
+
