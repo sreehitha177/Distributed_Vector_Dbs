@@ -11,7 +11,7 @@ Instead of searching the entire dataset at once, we:
 - Step 1: Use a clustering method (Random/KMeans) to choose the most relevant data partitions for a query.
 - Step 2: Search only those selected partitions using FAISS (HNSW index).
 - Step 3: Combine the results from those partitions and return the final top matches.
-- 
+  
 ## Steps
 
 ### Step 1: Single-Host
@@ -34,18 +34,18 @@ Instead of searching the entire dataset at once, we:
 
 ## Building Components
 
-- Step 1: Single-Host Search (Baseline)
-Build a full FAISS index (HNSW) on one machine.
-Run queries and record recall, latency, and number of distance computations.
-This gives a baseline to compare against.
-- Step 2: Simple Distributed Search with Partitioning
-Split the dataset randomly across multiple machines or partitions.
-Build a separate HNSW index on each partition.
-Send the query to all partitions or top-k partitions (multi-step).
-Merge results from each partition and evaluate recall and latency.
-- Step 3: Explore More Efficient Search
-Try to improve step 2 using smarter partition selection (e.g., based on routing or query-to-centroid distance).
-Evaluate if fewer partitions can be searched while maintaining recall.
+### Step 1: Single-Host Search (Baseline)
+- Build a full FAISS index (HNSW) on one machine.
+- Run queries and record recall, latency, and number of distance computations.
+- This gives a baseline to compare against.
+### Step 2: Simple Distributed Search with Partitioning
+- Split the dataset randomly across multiple machines or partitions.
+- Build a separate HNSW index on each partition.
+- Send the query to all partitions or top-k partitions (multi-step).
+- Merge results from each partition and evaluate recall and latency.
+### Step 3: Explore More Efficient Search
+- Try to improve step 2 using smarter partition selection (e.g., based on routing or query-to-centroid distance).
+- Evaluate if fewer partitions can be searched while maintaining recall.
 
 ---
 
