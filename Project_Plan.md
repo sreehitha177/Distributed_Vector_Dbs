@@ -80,5 +80,4 @@ Evaluate if fewer partitions can be searched while maintaining recall.
 - Does dividing the data affect result accuracy?
 - Can I get good results by searching only a few parts?
 
-"""
 
