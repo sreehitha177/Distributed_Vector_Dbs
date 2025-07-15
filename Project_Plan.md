@@ -6,7 +6,7 @@ The goal of this project is to build and test a basic multi-step search system f
 
 ---
 
-##What Is Multi-Step Search?
+## What Is Multi-Step Search?
 Instead of searching the entire dataset at once, we:
 - Step 1: Use a clustering method (Random/KMeans) to choose the most relevant data partitions for a query.
 - Step 2: Search only those selected partitions using FAISS (HNSW index).
